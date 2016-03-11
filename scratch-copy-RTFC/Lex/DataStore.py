@@ -27,15 +27,16 @@ import time
 import errno
 import logging
 
-import SqlAbstraction
+from Abe import SqlAbstraction
 
-import Chain
+from Abe import Chain
+from Chain import *
 
 # bitcointools -- modified deserialize.py to return raw transaction
-import BCDataStream
-import deserialize
-import util
-import base58
+from Abe import BCDataStream
+from Abe import deserialize
+from Abe import util
+from Abe import base58
 
 SCHEMA_TYPE = "Abe"
 SCHEMA_VERSION = SCHEMA_TYPE + "40"
@@ -50,7 +51,7 @@ CONFIG_DEFAULTS = {
     "commit_bytes":       None,
     "log_sql":            None,
     "log_rpc":            None,
-    "default_chain":      "Bitcoin",
+    "default_chain":      "Woodcoin",
     "datadir":            None,
     "ignore_bit8_chains": None,
     "use_firstbits":      False,
@@ -63,7 +64,7 @@ CONFIG_DEFAULTS = {
 WORK_BITS = 304  # XXX more than necessary.
 
 CHAIN_CONFIG = [
-   {"chain":"Woodcoin","code3":"LOG", "address_version":"\x002G", "magic":"\xfc\xd9\xb7\xdd"},
+   {"chain":"Woodcoin","code3":"LOG", "address_version":"\x0049", "magic":"\xfc\xd9\xb7\xdd"},
     #{"chain":"",
     # "code3":"", "address_version":"\x", "magic":""},
     ]

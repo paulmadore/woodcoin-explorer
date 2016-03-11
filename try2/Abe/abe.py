@@ -28,14 +28,14 @@ import math
 import logging
 import json
 
-import version
-import DataStore
-import readconf
+from Abe import version
+from Abe import DataStore
+from Abe import readconf
 
 # bitcointools -- modified deserialize.py to return raw transaction
-import deserialize
-import util  # Added functions.
-import base58
+from Abe import deserialize
+from Abe import util  # Added functions.
+from Abe import base58
 
 __version__ = version.__version__
 
